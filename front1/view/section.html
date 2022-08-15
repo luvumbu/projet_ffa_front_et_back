@@ -1,0 +1,61 @@
+<div class="display-flex-around">
+    <div id="gauche">
+
+    </div>
+    <div id="droite">
+
+    </div>
+</div>
+
+
+
+<style>
+#gauche{
+    width:50%;
+    height:400px; 
+    background-color:red ; 
+}
+#droite{
+    width: 50%;
+    background-color:blue ; 
+
+    height:400px; 
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    
+var links="https://bokonzi.com/projet_ffa_front_et_back/back/index.php/";    
+
+var play1="`get_result_users_nom_4_array_2`";
+var para1="DISTINCT "+play1;
+var para2="info_all_array";
+var para3="1";
+var para4="ORDER BY"+play1+"LIMIT 1000";
+
+var source =links+'/'+para1+'/'+para2+'/'+para3+'/'+para4 ; 
+
+ 
+
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+     console.log(myObj) ; 
+  }
+};
+xmlhttp.open("GET", source, true);
+xmlhttp.send();
+</script>

@@ -1,0 +1,51 @@
+
+<div class="text-align-c">
+    <h1>Athlete</h1>
+</div>
+<div class="margin-top-100"></div>
+<div class="display-flex-around text-align-c color-1">
+    <div> 
+        <h2>Clubs</h2>
+    </div>
+    <div>
+        <h2>Athletes</h2> 
+    </div> 
+    <div>
+        <h2>Villes</h2>
+    </div>
+</div>    
+
+<style>
+
+:root {
+  --main-bg-color1: #a6917c ;
+  --main-bg-color2: #605142 ;
+}
+
+
+    .text-align-c{
+        text-align: center;
+    }
+    .display-flex-around{
+        display: flex;
+        justify-content: space-around;
+    }
+    .display-flex-around div{
+            width:100% ;
+    }
+    .color-1 div:hover{
+        background-image: linear-gradient(var(--main-bg-color1),var(--main-bg-color2));
+        cursor:pointer ; 
+    }
+    .color-1 div{
+        background-image: linear-gradient(var(--main-bg-color2),var(--main-bg-color2));
+        color:white ; 
+    }
+    .margin-top-100{
+        margin-top: 100px;
+    }
+    h2{
+        letter-spacing: 5px;
+    }
+
+</style>
